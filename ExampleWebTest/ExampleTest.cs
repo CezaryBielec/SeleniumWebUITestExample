@@ -10,9 +10,9 @@ namespace ExampleWebTest
         [InlineData ("work stuff")]
         private void TestMethod(string phrase)
         {
-            //Act
-            var googleMainPage = new GoogleMainPage(Driver);
             //Arrange
+            var googleMainPage = new GoogleMainPage(Driver);
+            //Act
             ResultPage resultPage = googleMainPage.SearchForPhrase(phrase);
             //Assert
             Assert.True(resultPage.AreResultsLoaded());
